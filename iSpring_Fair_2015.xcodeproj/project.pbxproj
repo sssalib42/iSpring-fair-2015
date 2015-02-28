@@ -7,13 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31C440F21A9F4F4300703574 /* iSpring_Fair_2015.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2BE1A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodeld */; };
+		31C440F31A9F4F4400703574 /* iSpring_Fair_2015.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2BE1A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodeld */; };
+		31D29CD41A9B22540076369A /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D29CD31A9B22540076369A /* Interview.swift */; };
+		31D29CD51A9B22540076369A /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D29CD31A9B22540076369A /* Interview.swift */; };
+		31DD94BC1A9C1C5200A8AAD6 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DD94BB1A9C1C5200A8AAD6 /* NotesViewController.swift */; };
+		31DD94BD1A9C1C5200A8AAD6 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DD94BB1A9C1C5200A8AAD6 /* NotesViewController.swift */; };
 		31EED2BD1A9AF3B9007C268D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2BC1A9AF3B9007C268D /* AppDelegate.swift */; };
-		31EED2C01A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2BE1A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodeld */; };
-		31EED2C21A9AF3B9007C268D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2C11A9AF3B9007C268D /* ViewController.swift */; };
-		31EED2C51A9AF3B9007C268D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31EED2C31A9AF3B9007C268D /* Main.storyboard */; };
 		31EED2C71A9AF3B9007C268D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31EED2C61A9AF3B9007C268D /* Images.xcassets */; };
 		31EED2CA1A9AF3B9007C268D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31EED2C81A9AF3B9007C268D /* LaunchScreen.xib */; };
 		31EED2D61A9AF3BA007C268D /* iSpring_Fair_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2D51A9AF3BA007C268D /* iSpring_Fair_2015Tests.swift */; };
+		31EED2E01A9AF413007C268D /* RelevantCompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2DF1A9AF413007C268D /* RelevantCompaniesTableViewController.swift */; };
+		31EED2E21A9AF442007C268D /* searchRelevantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E11A9AF442007C268D /* searchRelevantViewController.swift */; };
+		31EED2EF1A9AF4E5007C268D /* AddCompanyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E31A9AF4E5007C268D /* AddCompanyPickerView.swift */; };
+		31EED2F01A9AF4E5007C268D /* AddCompanyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E31A9AF4E5007C268D /* AddCompanyPickerView.swift */; };
+		31EED2F11A9AF4E5007C268D /* AddCompanyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E41A9AF4E5007C268D /* AddCompanyPickerViewController.swift */; };
+		31EED2F21A9AF4E5007C268D /* AddCompanyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E41A9AF4E5007C268D /* AddCompanyPickerViewController.swift */; };
+		31EED2F31A9AF4E5007C268D /* AllCompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E51A9AF4E5007C268D /* AllCompaniesViewController.swift */; };
+		31EED2F41A9AF4E5007C268D /* AllCompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E51A9AF4E5007C268D /* AllCompaniesViewController.swift */; };
+		31EED2F51A9AF4E5007C268D /* CareerFairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E61A9AF4E5007C268D /* CareerFairTableViewController.swift */; };
+		31EED2F61A9AF4E5007C268D /* CareerFairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E61A9AF4E5007C268D /* CareerFairTableViewController.swift */; };
+		31EED2F71A9AF4E5007C268D /* CompaniesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E71A9AF4E5007C268D /* CompaniesData.swift */; };
+		31EED2F81A9AF4E5007C268D /* CompaniesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E71A9AF4E5007C268D /* CompaniesData.swift */; };
+		31EED2F91A9AF4E5007C268D /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E81A9AF4E5007C268D /* Company.swift */; };
+		31EED2FA1A9AF4E5007C268D /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E81A9AF4E5007C268D /* Company.swift */; };
+		31EED2FB1A9AF4E5007C268D /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E91A9AF4E5007C268D /* CompanyData.swift */; };
+		31EED2FC1A9AF4E5007C268D /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E91A9AF4E5007C268D /* CompanyData.swift */; };
+		31EED2FD1A9AF4E5007C268D /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EA1A9AF4E5007C268D /* CompanyViewController.swift */; };
+		31EED2FE1A9AF4E5007C268D /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EA1A9AF4E5007C268D /* CompanyViewController.swift */; };
+		31EED3011A9AF4E5007C268D /* InterviewDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EC1A9AF4E5007C268D /* InterviewDatePickerViewController.swift */; };
+		31EED3021A9AF4E5007C268D /* InterviewDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EC1A9AF4E5007C268D /* InterviewDatePickerViewController.swift */; };
+		31EED3031A9AF4E5007C268D /* InterviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2ED1A9AF4E5007C268D /* InterviewsTableViewController.swift */; };
+		31EED3041A9AF4E5007C268D /* InterviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2ED1A9AF4E5007C268D /* InterviewsTableViewController.swift */; };
+		31EED3051A9AF4E5007C268D /* MyCompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EE1A9AF4E5007C268D /* MyCompaniesViewController.swift */; };
+		31EED3061A9AF4E5007C268D /* MyCompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EE1A9AF4E5007C268D /* MyCompaniesViewController.swift */; };
+		31EED30D1A9AF597007C268D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31EED30C1A9AF597007C268D /* Main.storyboard */; };
+		31EED30E1A9AF597007C268D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31EED30C1A9AF597007C268D /* Main.storyboard */; };
+		31EED30F1A9AF673007C268D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2BC1A9AF3B9007C268D /* AppDelegate.swift */; };
+		31EED3101A9AF67F007C268D /* RelevantCompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2DF1A9AF413007C268D /* RelevantCompaniesTableViewController.swift */; };
+		31EED3111A9AF686007C268D /* searchRelevantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E11A9AF442007C268D /* searchRelevantViewController.swift */; };
+		31EED3121A9AF692007C268D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31EED2C81A9AF3B9007C268D /* LaunchScreen.xib */; };
+		31EED3131A9AF697007C268D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31EED2C61A9AF3B9007C268D /* Images.xcassets */; };
+		31EED31C1A9AF747007C268D /* businessman-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3151A9AF747007C268D /* businessman-26.png */; };
+		31EED31D1A9AF747007C268D /* businessman-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3151A9AF747007C268D /* businessman-26.png */; };
+		31EED31E1A9AF747007C268D /* checked_checkbox-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3161A9AF747007C268D /* checked_checkbox-26.png */; };
+		31EED31F1A9AF747007C268D /* checked_checkbox-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3161A9AF747007C268D /* checked_checkbox-26.png */; };
+		31EED3201A9AF747007C268D /* conference-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3171A9AF747007C268D /* conference-26.png */; };
+		31EED3211A9AF747007C268D /* conference-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3171A9AF747007C268D /* conference-26.png */; };
+		31EED3221A9AF747007C268D /* meeting-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3181A9AF747007C268D /* meeting-26.png */; };
+		31EED3231A9AF747007C268D /* meeting-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3181A9AF747007C268D /* meeting-26.png */; };
+		31EED3241A9AF747007C268D /* MyCompanies32.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3191A9AF747007C268D /* MyCompanies32.png */; };
+		31EED3251A9AF747007C268D /* MyCompanies32.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED3191A9AF747007C268D /* MyCompanies32.png */; };
+		31EED3261A9AF747007C268D /* search_property-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED31A1A9AF747007C268D /* search_property-26.png */; };
+		31EED3271A9AF747007C268D /* search_property-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED31A1A9AF747007C268D /* search_property-26.png */; };
+		31EED3281A9AF747007C268D /* unchecked_checkbox-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED31B1A9AF747007C268D /* unchecked_checkbox-26.png */; };
+		31EED3291A9AF747007C268D /* unchecked_checkbox-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 31EED31B1A9AF747007C268D /* unchecked_checkbox-26.png */; };
+		31EED32B1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED32A1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift */; };
+		31EED32C1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED32A1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +77,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31D29CD31A9B22540076369A /* Interview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
+		31DD94BB1A9C1C5200A8AAD6 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		31EED2B71A9AF3B9007C268D /* iSpring_Fair_2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpring_Fair_2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31EED2BB1A9AF3B9007C268D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31EED2BC1A9AF3B9007C268D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31EED2BF1A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSpring_Fair_2015.xcdatamodel; sourceTree = "<group>"; };
-		31EED2C11A9AF3B9007C268D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		31EED2C41A9AF3B9007C268D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31EED2C61A9AF3B9007C268D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		31EED2C91A9AF3B9007C268D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		31EED2CF1A9AF3BA007C268D /* iSpring_Fair_2015Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSpring_Fair_2015Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31EED2D41A9AF3BA007C268D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31EED2D51A9AF3BA007C268D /* iSpring_Fair_2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSpring_Fair_2015Tests.swift; sourceTree = "<group>"; };
+		31EED2DF1A9AF413007C268D /* RelevantCompaniesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelevantCompaniesTableViewController.swift; sourceTree = "<group>"; };
+		31EED2E11A9AF442007C268D /* searchRelevantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchRelevantViewController.swift; sourceTree = "<group>"; };
+		31EED2E31A9AF4E5007C268D /* AddCompanyPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompanyPickerView.swift; sourceTree = "<group>"; };
+		31EED2E41A9AF4E5007C268D /* AddCompanyPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompanyPickerViewController.swift; sourceTree = "<group>"; };
+		31EED2E51A9AF4E5007C268D /* AllCompaniesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCompaniesViewController.swift; sourceTree = "<group>"; };
+		31EED2E61A9AF4E5007C268D /* CareerFairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerFairTableViewController.swift; sourceTree = "<group>"; };
+		31EED2E71A9AF4E5007C268D /* CompaniesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesData.swift; sourceTree = "<group>"; };
+		31EED2E81A9AF4E5007C268D /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		31EED2E91A9AF4E5007C268D /* CompanyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
+		31EED2EA1A9AF4E5007C268D /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		31EED2EC1A9AF4E5007C268D /* InterviewDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewDatePickerViewController.swift; sourceTree = "<group>"; };
+		31EED2ED1A9AF4E5007C268D /* InterviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewsTableViewController.swift; sourceTree = "<group>"; };
+		31EED2EE1A9AF4E5007C268D /* MyCompaniesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCompaniesViewController.swift; sourceTree = "<group>"; };
+		31EED30C1A9AF597007C268D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		31EED3151A9AF747007C268D /* businessman-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "businessman-26.png"; sourceTree = "<group>"; };
+		31EED3161A9AF747007C268D /* checked_checkbox-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checked_checkbox-26.png"; sourceTree = "<group>"; };
+		31EED3171A9AF747007C268D /* conference-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "conference-26.png"; sourceTree = "<group>"; };
+		31EED3181A9AF747007C268D /* meeting-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meeting-26.png"; sourceTree = "<group>"; };
+		31EED3191A9AF747007C268D /* MyCompanies32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyCompanies32.png; sourceTree = "<group>"; };
+		31EED31A1A9AF747007C268D /* search_property-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_property-26.png"; sourceTree = "<group>"; };
+		31EED31B1A9AF747007C268D /* unchecked_checkbox-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unchecked_checkbox-26.png"; sourceTree = "<group>"; };
+		31EED32A1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveTextFieldViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +133,7 @@
 		31EED2AE1A9AF3B9007C268D = {
 			isa = PBXGroup;
 			children = (
+				31DD94BB1A9C1C5200A8AAD6 /* NotesViewController.swift */,
 				31EED2B91A9AF3B9007C268D /* iSpring_Fair_2015 */,
 				31EED2D21A9AF3BA007C268D /* iSpring_Fair_2015Tests */,
 				31EED2B81A9AF3B9007C268D /* Products */,
@@ -80,11 +153,30 @@
 			isa = PBXGroup;
 			children = (
 				31EED2BC1A9AF3B9007C268D /* AppDelegate.swift */,
-				31EED2C11A9AF3B9007C268D /* ViewController.swift */,
-				31EED2C31A9AF3B9007C268D /* Main.storyboard */,
-				31EED2C61A9AF3B9007C268D /* Images.xcassets */,
+				31EED2EA1A9AF4E5007C268D /* CompanyViewController.swift */,
+				31EED2E61A9AF4E5007C268D /* CareerFairTableViewController.swift */,
+				31EED2E51A9AF4E5007C268D /* AllCompaniesViewController.swift */,
+				31EED2E41A9AF4E5007C268D /* AddCompanyPickerViewController.swift */,
+				31EED2DF1A9AF413007C268D /* RelevantCompaniesTableViewController.swift */,
+				31EED2E11A9AF442007C268D /* searchRelevantViewController.swift */,
+				31EED2EE1A9AF4E5007C268D /* MyCompaniesViewController.swift */,
+				31EED2E31A9AF4E5007C268D /* AddCompanyPickerView.swift */,
+				31EED2ED1A9AF4E5007C268D /* InterviewsTableViewController.swift */,
+				31EED2EC1A9AF4E5007C268D /* InterviewDatePickerViewController.swift */,
+				31EED2E71A9AF4E5007C268D /* CompaniesData.swift */,
+				31EED2E81A9AF4E5007C268D /* Company.swift */,
+				31EED2E91A9AF4E5007C268D /* CompanyData.swift */,
+				31D29CD31A9B22540076369A /* Interview.swift */,
+				31EED30C1A9AF597007C268D /* Main.storyboard */,
 				31EED2C81A9AF3B9007C268D /* LaunchScreen.xib */,
-				31EED2BE1A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodeld */,
+				31EED2C61A9AF3B9007C268D /* Images.xcassets */,
+				31EED3151A9AF747007C268D /* businessman-26.png */,
+				31EED3161A9AF747007C268D /* checked_checkbox-26.png */,
+				31EED3171A9AF747007C268D /* conference-26.png */,
+				31EED3181A9AF747007C268D /* meeting-26.png */,
+				31EED3191A9AF747007C268D /* MyCompanies32.png */,
+				31EED31A1A9AF747007C268D /* search_property-26.png */,
+				31EED31B1A9AF747007C268D /* unchecked_checkbox-26.png */,
 				31EED2BA1A9AF3B9007C268D /* Supporting Files */,
 			);
 			path = iSpring_Fair_2015;
@@ -93,6 +185,8 @@
 		31EED2BA1A9AF3B9007C268D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				31EED32A1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift */,
+				31EED2BE1A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodeld */,
 				31EED2BB1A9AF3B9007C268D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -195,8 +289,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31EED2C51A9AF3B9007C268D /* Main.storyboard in Resources */,
+				31EED30D1A9AF597007C268D /* Main.storyboard in Resources */,
+				31EED3221A9AF747007C268D /* meeting-26.png in Resources */,
+				31EED31E1A9AF747007C268D /* checked_checkbox-26.png in Resources */,
 				31EED2CA1A9AF3B9007C268D /* LaunchScreen.xib in Resources */,
+				31EED3201A9AF747007C268D /* conference-26.png in Resources */,
+				31EED31C1A9AF747007C268D /* businessman-26.png in Resources */,
+				31EED3241A9AF747007C268D /* MyCompanies32.png in Resources */,
+				31EED3281A9AF747007C268D /* unchecked_checkbox-26.png in Resources */,
+				31EED3261A9AF747007C268D /* search_property-26.png in Resources */,
 				31EED2C71A9AF3B9007C268D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +306,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31EED3131A9AF697007C268D /* Images.xcassets in Resources */,
+				31EED3231A9AF747007C268D /* meeting-26.png in Resources */,
+				31EED31F1A9AF747007C268D /* checked_checkbox-26.png in Resources */,
+				31EED3121A9AF692007C268D /* LaunchScreen.xib in Resources */,
+				31EED3211A9AF747007C268D /* conference-26.png in Resources */,
+				31EED31D1A9AF747007C268D /* businessman-26.png in Resources */,
+				31EED3251A9AF747007C268D /* MyCompanies32.png in Resources */,
+				31EED3291A9AF747007C268D /* unchecked_checkbox-26.png in Resources */,
+				31EED3271A9AF747007C268D /* search_property-26.png in Resources */,
+				31EED30E1A9AF597007C268D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +326,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31EED2C21A9AF3B9007C268D /* ViewController.swift in Sources */,
-				31EED2C01A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodeld in Sources */,
+				31EED2E01A9AF413007C268D /* RelevantCompaniesTableViewController.swift in Sources */,
+				31EED3031A9AF4E5007C268D /* InterviewsTableViewController.swift in Sources */,
+				31EED3011A9AF4E5007C268D /* InterviewDatePickerViewController.swift in Sources */,
+				31EED2F51A9AF4E5007C268D /* CareerFairTableViewController.swift in Sources */,
+				31EED2F91A9AF4E5007C268D /* Company.swift in Sources */,
+				31EED2F11A9AF4E5007C268D /* AddCompanyPickerViewController.swift in Sources */,
 				31EED2BD1A9AF3B9007C268D /* AppDelegate.swift in Sources */,
+				31EED32B1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift in Sources */,
+				31C440F31A9F4F4400703574 /* iSpring_Fair_2015.xcdatamodeld in Sources */,
+				31EED2E21A9AF442007C268D /* searchRelevantViewController.swift in Sources */,
+				31EED2F71A9AF4E5007C268D /* CompaniesData.swift in Sources */,
+				31EED2FD1A9AF4E5007C268D /* CompanyViewController.swift in Sources */,
+				31EED2FB1A9AF4E5007C268D /* CompanyData.swift in Sources */,
+				31EED2EF1A9AF4E5007C268D /* AddCompanyPickerView.swift in Sources */,
+				31DD94BC1A9C1C5200A8AAD6 /* NotesViewController.swift in Sources */,
+				31D29CD41A9B22540076369A /* Interview.swift in Sources */,
+				31EED3051A9AF4E5007C268D /* MyCompaniesViewController.swift in Sources */,
+				31EED2F31A9AF4E5007C268D /* AllCompaniesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +351,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31EED2F41A9AF4E5007C268D /* AllCompaniesViewController.swift in Sources */,
+				31EED2F61A9AF4E5007C268D /* CareerFairTableViewController.swift in Sources */,
+				31EED3101A9AF67F007C268D /* RelevantCompaniesTableViewController.swift in Sources */,
+				31EED2F01A9AF4E5007C268D /* AddCompanyPickerView.swift in Sources */,
+				31EED30F1A9AF673007C268D /* AppDelegate.swift in Sources */,
+				31C440F21A9F4F4300703574 /* iSpring_Fair_2015.xcdatamodeld in Sources */,
+				31EED2F81A9AF4E5007C268D /* CompaniesData.swift in Sources */,
+				31EED3041A9AF4E5007C268D /* InterviewsTableViewController.swift in Sources */,
+				31EED2FA1A9AF4E5007C268D /* Company.swift in Sources */,
+				31DD94BD1A9C1C5200A8AAD6 /* NotesViewController.swift in Sources */,
+				31EED2FE1A9AF4E5007C268D /* CompanyViewController.swift in Sources */,
+				31EED3061A9AF4E5007C268D /* MyCompaniesViewController.swift in Sources */,
+				31EED2FC1A9AF4E5007C268D /* CompanyData.swift in Sources */,
 				31EED2D61A9AF3BA007C268D /* iSpring_Fair_2015Tests.swift in Sources */,
+				31EED32C1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift in Sources */,
+				31EED2F21A9AF4E5007C268D /* AddCompanyPickerViewController.swift in Sources */,
+				31D29CD51A9B22540076369A /* Interview.swift in Sources */,
+				31EED3021A9AF4E5007C268D /* InterviewDatePickerViewController.swift in Sources */,
+				31EED3111A9AF686007C268D /* searchRelevantViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		31EED2C31A9AF3B9007C268D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				31EED2C41A9AF3B9007C268D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		31EED2C81A9AF3B9007C268D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -343,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iSpring_Fair_2015/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iSpring_Fair_2015/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -411,6 +549,7 @@
 				31EED2DB1A9AF3BA007C268D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31EED2DC1A9AF3BA007C268D /* Build configuration list for PBXNativeTarget "iSpring_Fair_2015Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +558,7 @@
 				31EED2DE1A9AF3BA007C268D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
