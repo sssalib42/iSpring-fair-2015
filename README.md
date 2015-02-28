@@ -2,17 +2,29 @@
 An app to easily explore the attending companies at the 2015 Engineering Career fair of Tennessee Technological University.
 
 version 1
+
 The app provides the following services:
+
 1- The list of companies recruiting CSC
+
 2- The ability to scrool through the list of companies using the associated first letter.
+
 3- The ability to quickly search for a specific company at the attempt of typing its full name in a search bar.
+
 2- A quick summury about each company
+
 3- The recruited work type (Full-Time, Co-op, or Internship) of each company
+
 4- The ability to add an interview:
+
   a. Store a specific time and date, name of company, and a location for the interview.
+  
   b. Assiciated notes for each interview entry.
+  
   c. The ability to edit existing interview.
+  
   d. The ability to remove an interview entry.
+  
 
 version 2
 The app will include version 1, in addition to the following services:
