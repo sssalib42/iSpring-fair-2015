@@ -1,6 +1,10 @@
 # iSpring-fair-2015
 An app to easily explore the attending companies at the 2015 Engineering Career fair of Tennessee Technological University.
 
+
+************************************************************************************
+
+
 version 1: the app provides the following services:
 
 1- The list of companies recruiting CSC
@@ -24,7 +28,7 @@ version 1: the app provides the following services:
     d. The ability to remove an interview entry.
   
 
-
+************************************************************************************
 
 
 version 2: the app will include version 1, in addition to the following services:
@@ -66,6 +70,7 @@ version 3: the app will include version 2, in addition to hosting the list of co
 This will allow last minutes updates to be synced with the local iphone/ipad databae.
 
 
+************************************************************************************
 
 
 Tools:
