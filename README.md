@@ -15,14 +15,15 @@ version 1: the app provides the following services:
 
 4- The ability to add an interview:
 
-  a. Store a specific time and date, name of company, and a location for the interview.
+    a. Store a specific time and date, name of company, and a location for the interview.
   
-  b. Assiciated notes for each interview entry.
+    b. Assiciated notes for each interview entry.
   
-  c. The ability to edit existing interview.
+    c. The ability to edit existing interview.
   
-  d. The ability to remove an interview entry.
+    d. The ability to remove an interview entry.
   
+
 
 
 
@@ -32,15 +33,15 @@ version 2: the app will include version 1, in addition to the following services
 
 2- A full summury about each company, including:
 
-  a. A link to the website
+    a. A link to the website
   
-  b. Recruited majors
+    b. Recruited majors
 
-  c. Work type.
+    c. Work type.
   
-  d. Desired degrees 
+    d. Desired degrees 
   
-  e. The recruiter(s) name(s).
+    e. The recruiter(s) name(s).
   
 3- The ID number of each number as well as the booth location.
 
@@ -50,13 +51,14 @@ version 2: the app will include version 1, in addition to the following services
 
 6- For each company from the targeted companies' list, the user will be able to:
 
-  a. Checkmark each visited comapany
+    a. Checkmark each visited comapany
   
-  b. Add "before" visiting notes
+    b. Add "before" visiting notes
   
-  c. Add "after" visiting notes, including submitting a picture of a business card.
+    c. Add "after" visiting notes, including submitting a picture of a business card.
   
 
+************************************************************************************
 
 
 version 3: the app will include version 2, in addition to hosting the list of companies on an sqlite database server. 
