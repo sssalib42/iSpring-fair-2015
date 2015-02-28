@@ -24,6 +24,8 @@ version 1: the app provides the following services:
   d. The ability to remove an interview entry.
   
 
+
+
 version 2: the app will include version 1, in addition to the following services:
 
 1- The full list of companies attending the carrer fair
@@ -55,9 +57,13 @@ version 2: the app will include version 1, in addition to the following services
   c. Add "after" visiting notes, including submitting a picture of a business card.
   
 
+
+
 version 3: the app will include version 2, in addition to hosting the list of companies on an sqlite database server. 
 
 This will allow last minutes updates to be synced with the local iphone/ipad databae.
+
+
 
 
 Tools:
