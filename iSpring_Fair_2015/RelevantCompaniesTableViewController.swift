@@ -12,12 +12,13 @@ import CoreData
 class RelevantCompaniesTableViewController: CareerFairTableViewController {
     var allCompanies: Array<AnyObject> = []
     var accessoryIndex : NSIndexPath!
-    var relevantToAMajor: [AnyObject] = []
+    var relevantToAMajor: [Company]!
     var selectedMajor: String!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("view loaded")
             //create instance of the app delegate
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
             //retrive NSMContext
@@ -40,18 +41,94 @@ class RelevantCompaniesTableViewController: CareerFairTableViewController {
     }*/
 
     override func viewWillAppear(animated: Bool){
+        allCompanies.sort( {$0.name < $1.name} )
+        var company: Company!
+        var companyMajors: [String]!
+        println("View appeared")
         if(selectedMajor != nil){
-            for company in allCompanies{
-                var majorsText: String? = ( (company as NSManagedObject).valueForKey("majors") as String)
-                if ( majorsText!.rangeOfString(selectedMajor) != nil) {
-                        appendACompanyToAnArray( &relevantToAMajor, company: company as NSManagedObject)
+            if relevantToAMajor == nil{
+                relevantToAMajor = []
+            }
+            self.tableView.reloadData()
+            for aCompany in allCompanies{
+                company = Company(companyObj: aCompany as NSManagedObject)
+                companyMajors = company.listOf(company.majors!)
+                //println("name: \(company.name!)")
+                //println(companyMajors!)
+                for aMajor in companyMajors{
+                    //println(aMajor)
+                    if ( aMajor == selectedMajor) {
+                        //println("\(company.name) was choosen")
+                        relevantToAMajor! += [company]
+                    }
                 }
             }
+        selectedMajor = nil
         }
-        else{println("error at reading selected major")}
+        else{println("No newly selected major was found.")}
         
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("relevantCompanyCell", forIndexPath: indexPath) as UITableViewCell
+        println("A relevant company was selected")
+        if let name = relevantToAMajor[indexPath.row].name{
+            println("The relevant company's name is \(name)")
+            for aCompany in allCompanies{
+                if aCompany.valueForKey("name") as String == name{
+                    println("\(name) was found in the companies list.")
+                    var targeted: Bool!
+                    if (aCompany.valueForKey("targeted") as? Bool) != nil{
+                    }
+                    else{
+                        aCompany.setValue(false, forPasteboardType: "false")
+                    }
+                    
+                    targeted = aCompany.valueForKey("targeted") as? Bool
+                    print("The \(name) targetted state ")
+                    if !(targeted!){
+                        aCompany.setValue(true, forKey: "targeted")
+                        relevantToAMajor[indexPath.row].targeted = true
+                        print(name)
+                        println(" is targeted now")
+                        self.tableView.reloadData()
+                    } else if targeted!{
+                        aCompany.setValue(false, forKey: "targeted")
+                        relevantToAMajor[indexPath.row].targeted = false
+                        print(name)
+                        println(" is no longer targetted now")
+                        self.tableView.reloadData()
+                    } else{
+                        println(": error setting up the targetted value!")
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    
+    /*override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("relevantCompanyCell", forIndexPath: indexPath) as UITableViewCell
+        if let name = relevantToAMajor[indexPath.row].name{
+            for aCompany in allCompanies{
+                if aCompany.valueForKey("name") as String == name{
+                    aCompany.setValue(false, forKey: "targeted")
+                    if let targeted = aCompany.valueForKey("targeted") as? Bool{
+                        if targeted{
+                            println("It's no longer targeted")
+                        }
+                        else {
+                            println("The company is still targeted!")
+                        }
+                    }
+                    cell.textLabel?.text = relevantToAMajor[indexPath.row].name!
+                    cell.detailTextLabel?.text = relevantToAMajor[indexPath.row].workType!
+                    cell.imageView?.image = UIImage(contentsOfFile: "checked_checkbox-26.png")
+                }
+            }
+        }
+    }*/
    
 
     override func didReceiveMemoryWarning() {
@@ -70,7 +147,7 @@ class RelevantCompaniesTableViewController: CareerFairTableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        if let relevantComps : [NSManagedObject] = relevantToAMajor as? [NSManagedObject]{
+        if let relevantComps = relevantToAMajor as [Company]? {
             return relevantComps.count}
             //return 1}
         else{
@@ -82,21 +159,25 @@ class RelevantCompaniesTableViewController: CareerFairTableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("relevantCompanyCell", forIndexPath: indexPath) as UITableViewCell
         
-        if let companies: [NSManagedObject] = relevantToAMajor as? [NSManagedObject]{
-            cell.textLabel?.text = (relevantToAMajor[indexPath.row] as NSManagedObject).valueForKey("name") as? String
-            cell.detailTextLabel?.text = (relevantToAMajor[indexPath.row] as NSManagedObject).valueForKey("majors") as? String
+        if relevantToAMajor != nil{
+            let company = relevantToAMajor[indexPath.row]
+            if (company.targeted != nil)&&(company.targeted!){
+                cell.textLabel?.text = company.name!
+                cell.detailTextLabel?.text = company.workType!
+                cell.imageView?.image = UIImage(named: "checked_checkbox-26.png")
+            }
+            else{ //company is not targeted
+                cell.textLabel?.text = company.name!
+                cell.detailTextLabel?.text = company.workType!
+                cell.imageView?.image = UIImage(named: "unchecked_checkbox-26.png")
+            }
         }
         else{
             cell.textLabel?.text = "Empty!"
             cell.detailTextLabel?.text = "Search for a Major"
-            cell.imageView?.image = UIImage(named: "checked_checkbox-26.png")
+            cell.imageView?.image = UIImage(named: "unchecked_checkbox-26.png")
         }
         return cell
-    }
-    
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.dequeueReusableCellWithIdentifier("relevantCompanyCell", forIndexPath: indexPath) as UITableViewCell
-        cell.imageView?.image = UIImage(named: "unchecked_checkbox-26.png")
     }
 
     
@@ -149,13 +230,30 @@ class RelevantCompaniesTableViewController: CareerFairTableViewController {
             
             relevantCompsPickerViewController.myParentViewController = self
         }
+            
+            
+        else if segue.identifier == "relevantCompanyDetailSegue"{
+            if let myIndexPath = tableView.indexPathForCell(sender as UITableViewCell){
+                let selectedCompany = relevantToAMajor[myIndexPath.row]
+                    //refrence the destination view
+                if let detailViewController: CompanyViewController = segue.destinationViewController as? CompanyViewController{
+                        //send the companies detail text
+                    detailViewController.passedCompanyDetail = selectedCompany.valueForKey("detail") as String
+                }
+                else {
+                    println("Error referencing CompanyViewController")
+                }
+            }
+    
+            
         else {println("Error in segue")}
+        }
     }
     
     func setSelectedMajor(searchedMajor: String){
         selectedMajor = searchedMajor
-        relevantToAMajor = Array<AnyObject>()
         println("selected major: \(selectedMajor)")
+        relevantToAMajor=[]
     }
 
 }

@@ -11,20 +11,21 @@ import CoreData
 
 class MyCompaniesViewController: UITableViewController{
     var allCompanies: Array<AnyObject> = []
-    var myCompanies: [AnyObject] = []
+    var myCompanies: [Company] = []
     //myCompanies = companiesInfo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //create instance of the app delegate
+        println("my companies view did load")
+            //create instance of the app delegate
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        //retrive NSMContext
+            //retrive NSMContext
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
-        // instance of our NS fetch request
+            // instance of our NS fetch request
         let fetchRequest = NSFetchRequest(entityName: "Company")
             //populate the array from the database
         allCompanies = context.executeFetchRequest(fetchRequest, error: nil)!
+        println("number of companies: " + "\(allCompanies.count)")
         
         
         //cloneCompaniesInfoArray(&myCompanies)
@@ -45,6 +46,27 @@ class MyCompaniesViewController: UITableViewController{
 
     // MARK: - Table view data source
 
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+        myCompanies = []
+        println("myCompanies view did appear")
+        var company: Company!
+        for aCompany in allCompanies{
+            company = Company(companyObj: aCompany as NSManagedObject)
+            if let targeted = aCompany.valueForKey("targeted") as? Bool{
+                if targeted{
+                    //debugging
+                    println("found a targeted company")
+                    let name = aCompany.valueForKey("name") as String
+                    println("Targeted: \(name)")//
+                    myCompanies += [company]
+                    println("my companies: \(myCompanies)")
+                }
+            }
+        }
+    }
+    
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
@@ -65,30 +87,12 @@ class MyCompaniesViewController: UITableViewController{
         // Configure the cell...
         let company: Company = myCompanies[indexPath.row] as Company
         cell.textLabel?.text = company.name
-        //cell.detailTextLabel?.text = company.toSeperatedByCommas(company.workType!)
+        cell.detailTextLabel?.text   = company.valueForKey("number") as? String
+        cell.detailTextLabel?.text! += ", "
+        cell.detailTextLabel?.text! += company.valueForKey("location") as String
         return cell
     }
-    
 
-    
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    
-
-    
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            myCompanies.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     }
@@ -97,35 +101,56 @@ class MyCompaniesViewController: UITableViewController{
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //var compDetailViewController: CompanyViewController = segue.destinationViewController as CompanyViewController
-        //compDetailViewController.detailTextOutlet.text =
         
-        
-        /*if segue.identifier == "companyDetailView"{
-            var selectedRow = self.tableView.indexPathForSelectedRow()
-            var companyDetail: CompanyViewController = segue.destinationViewController as CompanyViewController
-            companyDetail.company = myCompanies[selectedRow!.row]
-        }*/
+        if segue.identifier == "myCompaniesDetailSegue"{
+            if let myIndexPath = self.tableView.indexPathForCell(sender as UITableViewCell){
+                let selectedCompany = myCompanies[myIndexPath.row]
+                    //refrence the destination view
+                if let detailViewController: CompanyViewController = segue.destinationViewController as? CompanyViewController{
+                    //send the companies detail text
+                    detailViewController.passedCompanyDetail = selectedCompany.valueForKey("detail") as String
+                }
+            }
+        }
     }
-
-    /*
-    // Override to support rearranging the table view.
+    
+    
+    //MARK: Editing Style
+    
+    
+        // Override to support conditional editing of the table view.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+            // Return NO if you do not want the specified item to be editable.
+        return true
+    }
+    
+        
+    
+        // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+    
+        
+    
+        // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+        
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
+    
+        
+    
+        // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the item to be re-orderable.
         return true
     }
-    */
 
-    
-
-
-    
 
 }

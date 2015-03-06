@@ -26,8 +26,6 @@ class AddCompanyPickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDe
         return 1
     }
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        
         return allCompanies.count
     }
     

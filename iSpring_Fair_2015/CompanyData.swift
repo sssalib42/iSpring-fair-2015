@@ -18,7 +18,9 @@ class CompanyData: NSManagedObject {
     @NSManaged var majors         :  String
     @NSManaged var desiredDegrees :  String
     @NSManaged var workType       :  String
-    @NSManaged var websiteName    :  String
+    @NSManaged var website        :  String
+    @NSManaged var targeted       :  Bool
+    @NSManaged var visited        :  Bool
     
         //interview properties
     //@NSManaged var interviewDate  :  NSDate?

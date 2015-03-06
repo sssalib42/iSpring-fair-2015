@@ -19,7 +19,11 @@ class AllCompaniesViewController: CareerFairTableViewController, UISearchBarDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addCompaniesToDB()
+        if !checkAppVersion("1.1"){
+            addCompaniesToDB()
+                //record that the initial app data was loaded
+            setAppVersion("1.1", date: NSDate(), detail: "This is the initial version.")
+        }
         displayCompaniesFromDB()
         // example: read file.txt
         //................
@@ -169,7 +173,7 @@ class AllCompaniesViewController: CareerFairTableViewController, UISearchBarDele
 
         // Configure the cell...
         cell!.textLabel?.text = company.valueForKey("name") as? String
-        cell!.detailTextLabel?.text = company.valueForKey("workType") as? String
+        cell!.detailTextLabel?.text   = company.valueForKey("majors") as? String
         return cell!
     }
     
@@ -193,11 +197,53 @@ class AllCompaniesViewController: CareerFairTableViewController, UISearchBarDele
         }    
     }
     
+    
+    
+    //ONLY USED FOR DEBUGGING (THE FIRST FOLLOWING FUNCTION)
+    func checkAppVersion(version: String)-> Bool{
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            //retrive NSMContext
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+            // instance of our NS fetch request
+        let fetchRequest = NSFetchRequest(entityName: "VersionControl")
+        
+            //populate the array from the database
+        if let releases = context.executeFetchRequest(fetchRequest, error: nil){
+            println(releases.count)
+            for aVersion in releases as [NSManagedObject]{
+                let verName = aVersion.valueForKey("version") as String
+                println("release is \(verName) and local var is \(version)")
+                if (aVersion.valueForKey("version")  as String) == version{
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
+    
+    func setAppVersion(version: String, date: NSDate, detail: String){
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        // ref to NS management context
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        let entity = NSEntityDescription.entityForName("VersionControl", inManagedObjectContext: context)
+        
+        var newVersion = ReleaseUpdate(entity: entity!, insertIntoManagedObjectContext: context)
+        newVersion.setValue(version, forKey: "version")
+        newVersion.setValue(date, forKey: "date")
+        newVersion.setValue(detail, forKey: "detail")
+        context.save(nil)
+        
+    }
+    
     func addCompaniesToDB(){
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         
         // ref to NS management context
         let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+        
+            //store the database
         let entity = NSEntityDescription.entityForName("Company", inManagedObjectContext: context)
 
         for company in allCompaniesArray{
@@ -207,10 +253,12 @@ class AllCompaniesViewController: CareerFairTableViewController, UISearchBarDele
             newCompany.number         = company.number!
             newCompany.location       = company.location!
             newCompany.detail         = company.detail!
-            newCompany.majors         = company.majorsAsString()
-            newCompany.desiredDegrees = company.desiredDegreesAsString()!
-            newCompany.workType       = company.workTypeAsString()!
-            newCompany.websiteName    = company.website!
+            newCompany.majors         = company.majors!
+            newCompany.desiredDegrees = company.desiredDegrees!
+            newCompany.workType       = company.workType!
+            newCompany.website        = company.website!
+            newCompany.targeted       = false
+            newCompany.visited        = false
         }
         context.save(nil)
     }
@@ -252,10 +300,8 @@ class AllCompaniesViewController: CareerFairTableViewController, UISearchBarDele
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        println("you got segue")
         if segue.identifier == "myDetailSegue"{
             var message = tableView.indexPathForSelectedRow()!.row
-            println("hey I'm here: \(message)")
                 //refrence the selcted company
             let selectedCompanyDetail: NSManagedObject = sections[self.tableView.indexPathForSelectedRow()!.section][tableView.indexPathForSelectedRow()!.row] as NSManagedObject
             

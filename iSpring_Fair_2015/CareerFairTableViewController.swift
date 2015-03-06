@@ -59,7 +59,8 @@ class CareerFairTableViewController: UITableViewController {
             
             //creat the section of the main major's-companies
             for aCompany in companiesList{
-                for aMajor in aCompany.majors!{
+                let companyMajors = aCompany.listOf(aCompany.majors!)
+                for  aMajor in companyMajors{
                     if aMajor == listOfMajors[majorIndex]{
                         //appendACompanyToAnArray(&tmpTupleCompaniesArray, company: aCompany)
                     }
@@ -80,7 +81,12 @@ class CareerFairTableViewController: UITableViewController {
         companiesList.append(company as NSManagedObject)
     }
  
-    
+    //*********************************************************
+    // func: Appends a company to a mutable array by reference
+    //*********************************************************
+    func appendACompanyToAnArray (inout companiesList: [Company], company: Company){
+        companiesList.append(company)
+    }
     
     
 

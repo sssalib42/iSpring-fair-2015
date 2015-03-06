@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="myCompaniesCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myCompanyCell" editingAccessoryType="disclosureIndicator" textLabel="0P1-rF-h4s" detailTextLabel="VfP-Qf-g3r" style="IBUITableViewCellStyleSubtitle" id="kDw-jK-dQY">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="myCompaniesCell" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="myCompanyCell" editingAccessoryType="disclosureIndicator" textLabel="0P1-rF-h4s" detailTextLabel="VfP-Qf-g3r" style="IBUITableViewCellStyleSubtitle" id="kDw-jK-dQY">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kDw-jK-dQY" id="uOz-7C-eDl">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -41,7 +41,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ssA-r0-Pv9" kind="showDetail" identifier="companyDetailSegue" id="Of4-MC-VGC"/>
+                                    <segue destination="ZTS-Ej-wMo" kind="show" identifier="myCompaniesDetailSegue" trigger="accessoryAction" id="A2F-tQ-Xxf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -58,84 +58,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXE-5K-hde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="756" y="369"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4fS-2Z-xqp">
-            <objects>
-                <navigationController storyboardIdentifier="detailViewNav" id="KBC-1f-5uP" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2pS-da-D0B">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ssA-r0-Pv9" kind="relationship" relationship="rootViewController" id="eeM-uO-Aon"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OZo-xa-s5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-46.5" y="1125"/>
-        </scene>
-        <!--Detail-->
-        <scene sceneID="Re7-2R-mpe">
-            <objects>
-                <viewController storyboardIdentifier="companyDetailView" id="ssA-r0-Pv9" customClass="CompanyViewController" customModule="iSpring_Fair_2015" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="js9-JQ-sx2"/>
-                        <viewControllerLayoutGuide type="bottom" id="rqd-Ia-E3D"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iIx-S5-Rym">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="companyDetailViewText" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBR-Ea-E4r">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="EBR-Ea-E4r" firstAttribute="top" secondItem="iIx-S5-Rym" secondAttribute="top" id="dtg-oJ-VwJ"/>
-                            <constraint firstItem="EBR-Ea-E4r" firstAttribute="leading" secondItem="iIx-S5-Rym" secondAttribute="leading" id="mni-xg-P6b"/>
-                            <constraint firstAttribute="trailing" secondItem="EBR-Ea-E4r" secondAttribute="trailing" id="sgP-sk-9OM"/>
-                            <constraint firstItem="EBR-Ea-E4r" firstAttribute="bottom" secondItem="rqd-Ia-E3D" secondAttribute="top" id="vFa-Ti-epm">
-                                <variation key="widthClass=compact" constant="-49"/>
-                            </constraint>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="EBR-Ea-E4r"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="dtg-oJ-VwJ"/>
-                                <exclude reference="mni-xg-P6b"/>
-                                <exclude reference="sgP-sk-9OM"/>
-                                <exclude reference="vFa-Ti-epm"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="EBR-Ea-E4r"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="dtg-oJ-VwJ"/>
-                                <include reference="mni-xg-P6b"/>
-                                <include reference="sgP-sk-9OM"/>
-                                <include reference="vFa-Ti-epm"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" title="Detail" id="KaA-Mw-JhH"/>
-                    <connections>
-                        <outlet property="detailTextOutlet" destination="EBR-Ea-E4r" id="fpL-YP-ioJ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mem-BE-OWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="687" y="1125"/>
         </scene>
         <!--Notes-->
         <scene sceneID="myb-Ea-86d">
@@ -428,7 +350,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="sectionIndexBackgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="relevantCompanyCell" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="relevantCompanyCell" textLabel="9ei-uf-9rC" detailTextLabel="LGf-ek-4Wu" imageView="rTH-qg-ihF" style="IBUITableViewCellStyleSubtitle" id="nUG-YN-bW7">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="relevantCompanyCell" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="relevantCompanyCell" textLabel="9ei-uf-9rC" detailTextLabel="LGf-ek-4Wu" style="IBUITableViewCellStyleSubtitle" id="nUG-YN-bW7">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="relevantCompaniesCell" tableViewCell="nUG-YN-bW7" id="0eI-nx-bIf">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -451,11 +373,11 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             </variation>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="unchecked_checkbox-26.png" id="rTH-qg-ihF">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ZTS-Ej-wMo" kind="show" identifier="relevantCompanyDetailSegue" trigger="accessoryAction" id="JTG-A4-0dn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -586,6 +508,7 @@
                         <viewControllerLayoutGuide type="bottom" id="H0s-cF-XTO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vz5-Xp-gh9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No available detail" translatesAutoresizingMaskIntoConstraints="NO" id="ooq-ep-Odw">
@@ -608,10 +531,10 @@
                                 <exclude reference="ooq-ep-Odw"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="DE3-tc-39Y"/>
                                 <exclude reference="BdS-bw-wqf"/>
                                 <exclude reference="R4o-W8-z0G"/>
                                 <exclude reference="u2n-il-RJ0"/>
-                                <exclude reference="DE3-tc-39Y"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -619,10 +542,10 @@
                                 <include reference="ooq-ep-Odw"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="DE3-tc-39Y"/>
                                 <include reference="BdS-bw-wqf"/>
                                 <include reference="R4o-W8-z0G"/>
                                 <include reference="u2n-il-RJ0"/>
-                                <include reference="DE3-tc-39Y"/>
                             </mask>
                         </variation>
                     </view>
@@ -639,10 +562,11 @@
             <objects>
                 <tableViewController storyboardIdentifier="allCompsTableView" id="AbM-kE-F8I" customClass="AllCompaniesViewController" customModule="iSpring_Fair_2015" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="allCompsViewCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jEq-HN-j61">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="J1d-fD-HjH">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -813,10 +737,9 @@
         <image name="businessman-26.png" width="26" height="26"/>
         <image name="conference-26.png" width="26" height="26"/>
         <image name="search_property-26.png" width="26" height="26"/>
-        <image name="unchecked_checkbox-26.png" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OpC-91-Sfu"/>
-        <segue reference="Of4-MC-VGC"/>
+        <segue reference="JTG-A4-0dn"/>
     </inferredMetricsTieBreakers>
 </document>

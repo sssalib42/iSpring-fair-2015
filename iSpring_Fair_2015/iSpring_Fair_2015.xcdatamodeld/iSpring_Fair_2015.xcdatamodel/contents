@@ -7,7 +7,9 @@
         <attribute name="majors" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="websiteName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targeted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="visited" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="workType" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Interview" representedClassName="Interview" syncable="YES">
@@ -16,8 +18,14 @@
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="VersionControl" representedClassName="ReleaseUpdate" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Company" positionX="-63" positionY="9" width="128" height="165"/>
+        <element name="Company" positionX="-63" positionY="9" width="128" height="195"/>
         <element name="Interview" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="VersionControl" positionX="-63" positionY="54" width="128" height="90"/>
     </elements>
 </model>

@@ -15,13 +15,14 @@ class searchRelevantViewController: UIViewController, UIPickerViewDataSource, UI
         //set in the parent view segue call
     var myParentViewController: RelevantCompaniesTableViewController!
     
-    var allMajorsList = ["EE", "CSC", "CE", "ECE", "Comp. Eng.", "ET", "Finance", "Mktg.", "ME", "Acct.", "Ag.", "Agribusiness Mgmt.", "Bus.", "Math", "Bio-Mol. Eng.", "Chem. Eng.", "Civil Eng.", "Chem. E.", "Business"]
+    var allMajorsList = ["Choose a Major", "Acct.", "Ag.", "Agribusiness Mgmt.", "Bio-Mol. Eng.", "Bus.", "Business", "CE", "CSC", "Chem. Eng.", "Civil Eng.", "Comp. Eng.", "ECE", "EE", "ET", "Finance", "ME", "Math", "Mktg."]
+
     
     @IBOutlet weak var majorsPickerView: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,23 +31,12 @@ class searchRelevantViewController: UIViewController, UIPickerViewDataSource, UI
     }
     
     @IBAction func saveButton(sender: AnyObject) {
-        
-        /*/empty old list
-        println("relevant list: \(myParentViewController.relevantToAMajor)")
-        myParentViewController.relevantToAMajor = nil
-        println("selected major= \(selectedMajor)")
-        println("relevant list: \(myParentViewController.relevantToAMajor)")
-        for company in myParentViewController.allCompanies{
-            println("companies name= \(company.name)")
-            println("companies majors= \(company.majors)")
-            if contains(company.majors!, selectedMajor){
-                appendACompanyToAnArray(&myParentViewController.relevantToAMajor!, company: company)
-                println("company: \(company.name) was appended!")
-                println("relevant list: \(myParentViewController.relevantToAMajor)")            }
+        if selectedMajor != ""{
+            if selectedMajor != "Choose a Major"{
+                println("a choice: \(selectedMajor)")
+                myParentViewController.setSelectedMajor(self.selectedMajor)
+            }
         }
-        self.myParentViewController = nil*/
-        
-        myParentViewController.setSelectedMajor(self.selectedMajor)        //myParentViewController.updateRelevantCompaniesMajor(selectedMajor)
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
@@ -70,6 +60,7 @@ class searchRelevantViewController: UIViewController, UIPickerViewDataSource, UI
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        	println("the selected major is: \(allMajorsList[row])")
         selectedMajor = allMajorsList[row]
         
     }
