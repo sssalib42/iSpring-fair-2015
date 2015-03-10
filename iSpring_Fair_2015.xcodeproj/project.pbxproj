@@ -7,14 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		317606971AAF12A2005C4C4A /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317606961AAF12A2005C4C4A /* CompanyViewController.swift */; };
+		317606981AAF12A2005C4C4A /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317606961AAF12A2005C4C4A /* CompanyViewController.swift */; };
+		3195A82C1AAEF3E000CB2326 /* star-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 3195A82B1AAEF3E000CB2326 /* star-25.png */; };
+		3195A82D1AAEF3E000CB2326 /* star-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 3195A82B1AAEF3E000CB2326 /* star-25.png */; };
 		31C440F21A9F4F4300703574 /* iSpring_Fair_2015.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2BE1A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodeld */; };
 		31C440F31A9F4F4400703574 /* iSpring_Fair_2015.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2BE1A9AF3B9007C268D /* iSpring_Fair_2015.xcdatamodeld */; };
 		31D29CD41A9B22540076369A /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D29CD31A9B22540076369A /* Interview.swift */; };
 		31D29CD51A9B22540076369A /* Interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D29CD31A9B22540076369A /* Interview.swift */; };
 		31D8262B1AA5D9D200E4BB30 /* ReleaseUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8262A1AA5D9D200E4BB30 /* ReleaseUpdate.swift */; };
 		31D8262C1AA5D9D200E4BB30 /* ReleaseUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8262A1AA5D9D200E4BB30 /* ReleaseUpdate.swift */; };
+		31DB237D1AAC41AB00E69179 /* Screen Shot 2015-03-08 at 3.21.31 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DB237C1AAC41AB00E69179 /* Screen Shot 2015-03-08 at 3.21.31 AM.png */; };
+		31DB237E1AAC41AB00E69179 /* Screen Shot 2015-03-08 at 3.21.31 AM.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DB237C1AAC41AB00E69179 /* Screen Shot 2015-03-08 at 3.21.31 AM.png */; };
+		31DB23811AAC461B00E69179 /* RoomLayoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DB23801AAC461B00E69179 /* RoomLayoutTableViewController.swift */; };
+		31DB23821AAC461B00E69179 /* RoomLayoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DB23801AAC461B00E69179 /* RoomLayoutTableViewController.swift */; };
+		31DC2D241AAEA8010087DFAC /* ChooseCompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DC2D231AAEA8010087DFAC /* ChooseCompanyTableViewController.swift */; };
+		31DC2D251AAEA8010087DFAC /* ChooseCompanyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DC2D231AAEA8010087DFAC /* ChooseCompanyTableViewController.swift */; };
 		31DD830B1AA90068002F6545 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DD830A1AA90068002F6545 /* TableViewController.swift */; };
 		31DD830C1AA90068002F6545 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DD830A1AA90068002F6545 /* TableViewController.swift */; };
+		31DD83101AA96029002F6545 /* Screen Shot 2015-03-05 at 9.53.08 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DD830D1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.53.08 PM.png */; };
+		31DD83111AA96029002F6545 /* Screen Shot 2015-03-05 at 9.53.08 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DD830D1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.53.08 PM.png */; };
+		31DD83121AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.49 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DD830E1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.49 PM.png */; };
+		31DD83131AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.49 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DD830E1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.49 PM.png */; };
+		31DD83141AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.37 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DD830F1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.37 PM.png */; };
+		31DD83151AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.37 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DD830F1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.37 PM.png */; };
+		31DD83171AA96187002F6545 /* map_marker-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DD83161AA96187002F6545 /* map_marker-24.png */; };
+		31DD83181AA96187002F6545 /* map_marker-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 31DD83161AA96187002F6545 /* map_marker-24.png */; };
 		31DD94BC1A9C1C5200A8AAD6 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DD94BB1A9C1C5200A8AAD6 /* NotesViewController.swift */; };
 		31DD94BD1A9C1C5200A8AAD6 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DD94BB1A9C1C5200A8AAD6 /* NotesViewController.swift */; };
 		31EED2BD1A9AF3B9007C268D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2BC1A9AF3B9007C268D /* AppDelegate.swift */; };
@@ -23,10 +41,6 @@
 		31EED2D61A9AF3BA007C268D /* iSpring_Fair_2015Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2D51A9AF3BA007C268D /* iSpring_Fair_2015Tests.swift */; };
 		31EED2E01A9AF413007C268D /* RelevantCompaniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2DF1A9AF413007C268D /* RelevantCompaniesTableViewController.swift */; };
 		31EED2E21A9AF442007C268D /* searchRelevantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E11A9AF442007C268D /* searchRelevantViewController.swift */; };
-		31EED2EF1A9AF4E5007C268D /* AddCompanyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E31A9AF4E5007C268D /* AddCompanyPickerView.swift */; };
-		31EED2F01A9AF4E5007C268D /* AddCompanyPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E31A9AF4E5007C268D /* AddCompanyPickerView.swift */; };
-		31EED2F11A9AF4E5007C268D /* AddCompanyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E41A9AF4E5007C268D /* AddCompanyPickerViewController.swift */; };
-		31EED2F21A9AF4E5007C268D /* AddCompanyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E41A9AF4E5007C268D /* AddCompanyPickerViewController.swift */; };
 		31EED2F31A9AF4E5007C268D /* AllCompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E51A9AF4E5007C268D /* AllCompaniesViewController.swift */; };
 		31EED2F41A9AF4E5007C268D /* AllCompaniesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E51A9AF4E5007C268D /* AllCompaniesViewController.swift */; };
 		31EED2F51A9AF4E5007C268D /* CareerFairTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E61A9AF4E5007C268D /* CareerFairTableViewController.swift */; };
@@ -37,8 +51,6 @@
 		31EED2FA1A9AF4E5007C268D /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E81A9AF4E5007C268D /* Company.swift */; };
 		31EED2FB1A9AF4E5007C268D /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E91A9AF4E5007C268D /* CompanyData.swift */; };
 		31EED2FC1A9AF4E5007C268D /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2E91A9AF4E5007C268D /* CompanyData.swift */; };
-		31EED2FD1A9AF4E5007C268D /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EA1A9AF4E5007C268D /* CompanyViewController.swift */; };
-		31EED2FE1A9AF4E5007C268D /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EA1A9AF4E5007C268D /* CompanyViewController.swift */; };
 		31EED3011A9AF4E5007C268D /* InterviewDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EC1A9AF4E5007C268D /* InterviewDatePickerViewController.swift */; };
 		31EED3021A9AF4E5007C268D /* InterviewDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2EC1A9AF4E5007C268D /* InterviewDatePickerViewController.swift */; };
 		31EED3031A9AF4E5007C268D /* InterviewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31EED2ED1A9AF4E5007C268D /* InterviewsTableViewController.swift */; };
@@ -81,9 +93,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		317606961AAF12A2005C4C4A /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		3195A82B1AAEF3E000CB2326 /* star-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-25.png"; sourceTree = "<group>"; };
 		31D29CD31A9B22540076369A /* Interview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interview.swift; sourceTree = "<group>"; };
 		31D8262A1AA5D9D200E4BB30 /* ReleaseUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReleaseUpdate.swift; path = ../ReleaseUpdate.swift; sourceTree = "<group>"; };
+		31DB237C1AAC41AB00E69179 /* Screen Shot 2015-03-08 at 3.21.31 AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2015-03-08 at 3.21.31 AM.png"; sourceTree = "<group>"; };
+		31DB23801AAC461B00E69179 /* RoomLayoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomLayoutTableViewController.swift; sourceTree = "<group>"; };
+		31DC2D231AAEA8010087DFAC /* ChooseCompanyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCompanyTableViewController.swift; sourceTree = "<group>"; };
 		31DD830A1AA90068002F6545 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		31DD830D1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.53.08 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2015-03-05 at 9.53.08 PM.png"; sourceTree = "<group>"; };
+		31DD830E1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.49 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2015-03-05 at 9.52.49 PM.png"; sourceTree = "<group>"; };
+		31DD830F1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.37 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2015-03-05 at 9.52.37 PM.png"; sourceTree = "<group>"; };
+		31DD83161AA96187002F6545 /* map_marker-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_marker-24.png"; sourceTree = "<group>"; };
 		31DD94BB1A9C1C5200A8AAD6 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		31EED2B71A9AF3B9007C268D /* iSpring_Fair_2015.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSpring_Fair_2015.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31EED2BB1A9AF3B9007C268D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,14 +117,11 @@
 		31EED2D51A9AF3BA007C268D /* iSpring_Fair_2015Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSpring_Fair_2015Tests.swift; sourceTree = "<group>"; };
 		31EED2DF1A9AF413007C268D /* RelevantCompaniesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelevantCompaniesTableViewController.swift; sourceTree = "<group>"; };
 		31EED2E11A9AF442007C268D /* searchRelevantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = searchRelevantViewController.swift; sourceTree = "<group>"; };
-		31EED2E31A9AF4E5007C268D /* AddCompanyPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompanyPickerView.swift; sourceTree = "<group>"; };
-		31EED2E41A9AF4E5007C268D /* AddCompanyPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCompanyPickerViewController.swift; sourceTree = "<group>"; };
 		31EED2E51A9AF4E5007C268D /* AllCompaniesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllCompaniesViewController.swift; sourceTree = "<group>"; };
 		31EED2E61A9AF4E5007C268D /* CareerFairTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareerFairTableViewController.swift; sourceTree = "<group>"; };
 		31EED2E71A9AF4E5007C268D /* CompaniesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesData.swift; sourceTree = "<group>"; };
 		31EED2E81A9AF4E5007C268D /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		31EED2E91A9AF4E5007C268D /* CompanyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
-		31EED2EA1A9AF4E5007C268D /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		31EED2EC1A9AF4E5007C268D /* InterviewDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewDatePickerViewController.swift; sourceTree = "<group>"; };
 		31EED2ED1A9AF4E5007C268D /* InterviewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterviewsTableViewController.swift; sourceTree = "<group>"; };
 		31EED2EE1A9AF4E5007C268D /* MyCompaniesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCompaniesViewController.swift; sourceTree = "<group>"; };
@@ -136,9 +154,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31DB237F1AAC42EB00E69179 /* location Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "location Images";
+			sourceTree = "<group>";
+		};
 		31EED2AE1A9AF3B9007C268D = {
 			isa = PBXGroup;
 			children = (
+				31DB23801AAC461B00E69179 /* RoomLayoutTableViewController.swift */,
 				31DD830A1AA90068002F6545 /* TableViewController.swift */,
 				31DD94BB1A9C1C5200A8AAD6 /* NotesViewController.swift */,
 				31EED2B91A9AF3B9007C268D /* iSpring_Fair_2015 */,
@@ -159,15 +185,14 @@
 		31EED2B91A9AF3B9007C268D /* iSpring_Fair_2015 */ = {
 			isa = PBXGroup;
 			children = (
+				317606961AAF12A2005C4C4A /* CompanyViewController.swift */,
 				31EED2BC1A9AF3B9007C268D /* AppDelegate.swift */,
-				31EED2EA1A9AF4E5007C268D /* CompanyViewController.swift */,
 				31EED2E61A9AF4E5007C268D /* CareerFairTableViewController.swift */,
 				31EED2E51A9AF4E5007C268D /* AllCompaniesViewController.swift */,
-				31EED2E41A9AF4E5007C268D /* AddCompanyPickerViewController.swift */,
 				31EED2DF1A9AF413007C268D /* RelevantCompaniesTableViewController.swift */,
 				31EED2E11A9AF442007C268D /* searchRelevantViewController.swift */,
 				31EED2EE1A9AF4E5007C268D /* MyCompaniesViewController.swift */,
-				31EED2E31A9AF4E5007C268D /* AddCompanyPickerView.swift */,
+				31DC2D231AAEA8010087DFAC /* ChooseCompanyTableViewController.swift */,
 				31EED2ED1A9AF4E5007C268D /* InterviewsTableViewController.swift */,
 				31EED2EC1A9AF4E5007C268D /* InterviewDatePickerViewController.swift */,
 				31EED2E71A9AF4E5007C268D /* CompaniesData.swift */,
@@ -178,7 +203,14 @@
 				31EED30C1A9AF597007C268D /* Main.storyboard */,
 				31EED2C81A9AF3B9007C268D /* LaunchScreen.xib */,
 				31EED2C61A9AF3B9007C268D /* Images.xcassets */,
+				31DB237F1AAC42EB00E69179 /* location Images */,
+				31DB237C1AAC41AB00E69179 /* Screen Shot 2015-03-08 at 3.21.31 AM.png */,
+				31DD830D1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.53.08 PM.png */,
+				31DD830E1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.49 PM.png */,
+				31DD830F1AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.37 PM.png */,
 				31EED3151A9AF747007C268D /* businessman-26.png */,
+				3195A82B1AAEF3E000CB2326 /* star-25.png */,
+				31DD83161AA96187002F6545 /* map_marker-24.png */,
 				31EED3161A9AF747007C268D /* checked_checkbox-26.png */,
 				31EED3171A9AF747007C268D /* conference-26.png */,
 				31EED3181A9AF747007C268D /* meeting-26.png */,
@@ -298,14 +330,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				31EED30D1A9AF597007C268D /* Main.storyboard in Resources */,
+				31DD83141AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.37 PM.png in Resources */,
 				31EED3221A9AF747007C268D /* meeting-26.png in Resources */,
 				31EED31E1A9AF747007C268D /* checked_checkbox-26.png in Resources */,
 				31EED2CA1A9AF3B9007C268D /* LaunchScreen.xib in Resources */,
 				31EED3201A9AF747007C268D /* conference-26.png in Resources */,
+				31DD83171AA96187002F6545 /* map_marker-24.png in Resources */,
 				31EED31C1A9AF747007C268D /* businessman-26.png in Resources */,
+				31DD83121AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.49 PM.png in Resources */,
 				31EED3241A9AF747007C268D /* MyCompanies32.png in Resources */,
+				31DB237D1AAC41AB00E69179 /* Screen Shot 2015-03-08 at 3.21.31 AM.png in Resources */,
 				31EED3281A9AF747007C268D /* unchecked_checkbox-26.png in Resources */,
+				3195A82C1AAEF3E000CB2326 /* star-25.png in Resources */,
 				31EED3261A9AF747007C268D /* search_property-26.png in Resources */,
+				31DD83101AA96029002F6545 /* Screen Shot 2015-03-05 at 9.53.08 PM.png in Resources */,
 				31EED2C71A9AF3B9007C268D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,14 +353,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				31EED3131A9AF697007C268D /* Images.xcassets in Resources */,
+				31DD83151AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.37 PM.png in Resources */,
 				31EED3231A9AF747007C268D /* meeting-26.png in Resources */,
 				31EED31F1A9AF747007C268D /* checked_checkbox-26.png in Resources */,
 				31EED3121A9AF692007C268D /* LaunchScreen.xib in Resources */,
 				31EED3211A9AF747007C268D /* conference-26.png in Resources */,
+				31DD83181AA96187002F6545 /* map_marker-24.png in Resources */,
 				31EED31D1A9AF747007C268D /* businessman-26.png in Resources */,
+				31DD83131AA96029002F6545 /* Screen Shot 2015-03-05 at 9.52.49 PM.png in Resources */,
 				31EED3251A9AF747007C268D /* MyCompanies32.png in Resources */,
+				31DB237E1AAC41AB00E69179 /* Screen Shot 2015-03-08 at 3.21.31 AM.png in Resources */,
 				31EED3291A9AF747007C268D /* unchecked_checkbox-26.png in Resources */,
+				3195A82D1AAEF3E000CB2326 /* star-25.png in Resources */,
 				31EED3271A9AF747007C268D /* search_property-26.png in Resources */,
+				31DD83111AA96029002F6545 /* Screen Shot 2015-03-05 at 9.53.08 PM.png in Resources */,
 				31EED30E1A9AF597007C268D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,17 +382,17 @@
 				31EED3031A9AF4E5007C268D /* InterviewsTableViewController.swift in Sources */,
 				31EED3011A9AF4E5007C268D /* InterviewDatePickerViewController.swift in Sources */,
 				31DD830B1AA90068002F6545 /* TableViewController.swift in Sources */,
+				317606971AAF12A2005C4C4A /* CompanyViewController.swift in Sources */,
 				31EED2F51A9AF4E5007C268D /* CareerFairTableViewController.swift in Sources */,
 				31EED2F91A9AF4E5007C268D /* Company.swift in Sources */,
-				31EED2F11A9AF4E5007C268D /* AddCompanyPickerViewController.swift in Sources */,
+				31DB23811AAC461B00E69179 /* RoomLayoutTableViewController.swift in Sources */,
 				31EED2BD1A9AF3B9007C268D /* AppDelegate.swift in Sources */,
+				31DC2D241AAEA8010087DFAC /* ChooseCompanyTableViewController.swift in Sources */,
 				31EED32B1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift in Sources */,
 				31C440F31A9F4F4400703574 /* iSpring_Fair_2015.xcdatamodeld in Sources */,
 				31EED2E21A9AF442007C268D /* searchRelevantViewController.swift in Sources */,
 				31EED2F71A9AF4E5007C268D /* CompaniesData.swift in Sources */,
-				31EED2FD1A9AF4E5007C268D /* CompanyViewController.swift in Sources */,
 				31EED2FB1A9AF4E5007C268D /* CompanyData.swift in Sources */,
-				31EED2EF1A9AF4E5007C268D /* AddCompanyPickerView.swift in Sources */,
 				31DD94BC1A9C1C5200A8AAD6 /* NotesViewController.swift in Sources */,
 				31D29CD41A9B22540076369A /* Interview.swift in Sources */,
 				31EED3051A9AF4E5007C268D /* MyCompaniesViewController.swift in Sources */,
@@ -363,22 +407,22 @@
 			files = (
 				31EED2F41A9AF4E5007C268D /* AllCompaniesViewController.swift in Sources */,
 				31DD830C1AA90068002F6545 /* TableViewController.swift in Sources */,
+				31DB23821AAC461B00E69179 /* RoomLayoutTableViewController.swift in Sources */,
 				31EED2F61A9AF4E5007C268D /* CareerFairTableViewController.swift in Sources */,
 				31D8262C1AA5D9D200E4BB30 /* ReleaseUpdate.swift in Sources */,
+				317606981AAF12A2005C4C4A /* CompanyViewController.swift in Sources */,
 				31EED3101A9AF67F007C268D /* RelevantCompaniesTableViewController.swift in Sources */,
-				31EED2F01A9AF4E5007C268D /* AddCompanyPickerView.swift in Sources */,
+				31DC2D251AAEA8010087DFAC /* ChooseCompanyTableViewController.swift in Sources */,
 				31EED30F1A9AF673007C268D /* AppDelegate.swift in Sources */,
 				31C440F21A9F4F4300703574 /* iSpring_Fair_2015.xcdatamodeld in Sources */,
 				31EED2F81A9AF4E5007C268D /* CompaniesData.swift in Sources */,
 				31EED3041A9AF4E5007C268D /* InterviewsTableViewController.swift in Sources */,
 				31EED2FA1A9AF4E5007C268D /* Company.swift in Sources */,
 				31DD94BD1A9C1C5200A8AAD6 /* NotesViewController.swift in Sources */,
-				31EED2FE1A9AF4E5007C268D /* CompanyViewController.swift in Sources */,
 				31EED3061A9AF4E5007C268D /* MyCompaniesViewController.swift in Sources */,
 				31EED2FC1A9AF4E5007C268D /* CompanyData.swift in Sources */,
 				31EED2D61A9AF3BA007C268D /* iSpring_Fair_2015Tests.swift in Sources */,
 				31EED32C1A9B0B47007C268D /* ResponsiveTextFieldViewController.swift in Sources */,
-				31EED2F21A9AF4E5007C268D /* AddCompanyPickerViewController.swift in Sources */,
 				31D29CD51A9B22540076369A /* Interview.swift in Sources */,
 				31EED3021A9AF4E5007C268D /* InterviewDatePickerViewController.swift in Sources */,
 				31EED3111A9AF686007C268D /* searchRelevantViewController.swift in Sources */,

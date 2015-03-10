@@ -12,7 +12,6 @@ import CoreData
 class MyCompaniesViewController: UITableViewController{
     var allCompanies: Array<AnyObject> = []
     var myCompanies: [Company] = []
-    //myCompanies = companiesInfo
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,8 +106,20 @@ class MyCompaniesViewController: UITableViewController{
                 let selectedCompany = myCompanies[myIndexPath.row]
                     //refrence the destination view
                 if let detailViewController: CompanyViewController = segue.destinationViewController as? CompanyViewController{
-                    //send the companies detail text
-                    detailViewController.passedCompanyDetail = selectedCompany.valueForKey("detail") as String
+                    
+                        //send the companies detail text
+                    var detail = selectedCompany.valueForKey("name") as String
+                    detail += "\r"
+                    detail += selectedCompany.valueForKey("website") as String
+                    detail += "\r\rMajors: \r"
+                    detail += selectedCompany.valueForKey("majors") as String
+                    detail += "\r\rDesired degrees: \r"
+                    detail += selectedCompany.valueForKey("desiredDegrees") as String
+                    detail += "\r\rWork Type:\r"
+                    detail += selectedCompany.valueForKey("workType") as String
+                    detail += "\r\rDescription:\r"
+                    detail += selectedCompany.valueForKey("detail") as String
+                    detailViewController.passedCompanyDetail = detail
                 }
             }
         }
@@ -129,8 +140,32 @@ class MyCompaniesViewController: UITableViewController{
         // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            if let name = myCompanies[indexPath.row].name{
+                println("The relevant company's name is \(name)")
+                for aCompany in allCompanies{
+                    if aCompany.valueForKey("name") as String == name{
+                        println("\(name) was found in the companies list.")
+                        var targeted: Bool!
+                        if (aCompany.valueForKey("targeted") as? Bool) != nil{
+                            targeted = aCompany.valueForKey("targeted") as? Bool
+                            print("The \(name) targetted state ")
+                            if targeted!{
+                                aCompany.setValue(false, forKey: "targeted")
+                                myCompanies[indexPath.row].targeted = false
+                                myCompanies.removeAtIndex(indexPath.row)
+                                print(name)
+                                println(" is no longer targetted now")
+                            } else{
+                                println(": error setting up the targetted value to false!")
+                            }
+                        } else{
+                          println("The company has no set \"targeted\" value.")
+                        }
+                    }
+                }
+                    // Delete the row from the data source
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            }
         }
         else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -139,9 +174,18 @@ class MyCompaniesViewController: UITableViewController{
     
         
     
-        // Override to support rearranging the table view.
+        /*/ Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("myCompanyCell", forIndexPath: fromIndexPath) as UITableViewCell
+        let replacementCell = tableView.dequeueReusableCellWithIdentifier("myCompanyCell", forIndexPath: toIndexPath) as UITableViewCell
         
+        let company: Company = myCompanies.removeAtIndex(fromIndexPath.row) as Company
+        myCompanies.insert(company, atIndex: toIndexPath.row)
+        cell.textLabel?.text = company.name
+        cell.detailTextLabel?.text   = company.valueForKey("number") as? String
+        cell.detailTextLabel?.text! += ", "
+        cell.detailTextLabel?.text! += company.valueForKey("location") as String
+        return cell
     }
     
         
@@ -150,7 +194,7 @@ class MyCompaniesViewController: UITableViewController{
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return NO if you do not want the item to be re-orderable.
         return true
-    }
+    }*/
 
 
 }

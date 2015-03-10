@@ -9,8 +9,9 @@
 import UIKit
 
 class AddCompanyPickerView: UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate  {
-    var allCompanies = companiesInfo
+    var allCompanies = []
     var pickerSelectedCompanyRow: Int?
+    
 
     /*
     // Only override drawRect: if you perform custom drawing.

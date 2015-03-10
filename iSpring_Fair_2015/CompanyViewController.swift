@@ -7,19 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class CompanyViewController: UIViewController {
     
-    
+    //var company : NSManagedObject!
     @IBOutlet var companyDetailTextView: UITextView!
-    
-    
-    
     var passedCompanyDetail: String!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if passedCompanyDetail != nil{
+   override func viewDidLoad(){
+    super.viewDidLoad()
+    println("in comp view")
+    if passedCompanyDetail != nil{
             companyDetailTextView.text = passedCompanyDetail
         }else{
             println("error in the passed company detail")

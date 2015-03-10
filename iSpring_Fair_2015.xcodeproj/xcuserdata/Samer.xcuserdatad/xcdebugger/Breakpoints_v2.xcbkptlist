@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iSpring_Fair_2015/RelevantCompaniesTableViewController.swift"
-            timestampString = "447292149.97898"
+            timestampString = "447689886.422184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "RelevantCompaniesTableViewController"
             landmarkType = "3">
          </BreakpointContent>

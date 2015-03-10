@@ -7,17 +7,25 @@
 //
 
 import UIKit
+import CoreData
 
 class AddCompanyPickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    var allCompanies = companiesInfo
+    var allCompanies = Array<AnyObject>()
     var pickerSelectedCompanyRow: Int?
     @IBOutlet var pickerResult: AddCompanyPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            //create instance of the app delegate
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            //retrive NSMContext
+        let context: NSManagedObjectContext = appDelegate.managedObjectContext!
+            // instance of our NS fetch request
+        let fetchRequest = NSFetchRequest(entityName: "Company")
         
-        
-        // Do any additional setup after loading the view.
+            //populate the array from the database
+        allCompanies = context.executeFetchRequest(fetchRequest, error: nil)!
+        allCompanies.sort( {$0.name < $1.name} )
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +34,15 @@ class AddCompanyPickerViewController: UIViewController, UIPickerViewDataSource, 
     }
     
     @IBAction func saveButton(sender: AnyObject) {
-        
+        if (pickerSelectedCompanyRow != nil) {
+            if let company: NSManagedObject = allCompanies[pickerSelectedCompanyRow!] as? NSManagedObject
+            {
+                if let targeted: Bool = company.valueForKey("targeted") as? Bool{
+                    company.setValue(true, forKey: "targeted")
+                }
+            }
+            
+        }
         self.navigationController?.popToRootViewControllerAnimated(true)
         //println("selected : \(allCompanies[pickerSelectedCompanyRow!])")
         

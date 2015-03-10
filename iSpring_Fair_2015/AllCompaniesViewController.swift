@@ -292,7 +292,7 @@ class AllCompaniesViewController: CareerFairTableViewController, UISearchBarDele
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //refrence the selcted company
         let selectedCompanyDetail: NSManagedObject = sections[self.tableView.indexPathForSelectedRow()!.section][tableView.indexPathForSelectedRow()!.row] as NSManagedObject
-        performSegueWithIdentifier("myDetailSegue", sender: tableView.cellForRowAtIndexPath(indexPath))
+        performSegueWithIdentifier("companiesDetailSegue", sender: tableView.cellForRowAtIndexPath(indexPath))
         
     }
     
@@ -300,7 +300,7 @@ class AllCompaniesViewController: CareerFairTableViewController, UISearchBarDele
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "myDetailSegue"{
+        if segue.identifier == "companiesDetailSegue"{
             var message = tableView.indexPathForSelectedRow()!.row
                 //refrence the selcted company
             let selectedCompanyDetail: NSManagedObject = sections[self.tableView.indexPathForSelectedRow()!.section][tableView.indexPathForSelectedRow()!.row] as NSManagedObject
@@ -309,7 +309,20 @@ class AllCompaniesViewController: CareerFairTableViewController, UISearchBarDele
             let companyDetailViewController: CompanyViewController = segue.destinationViewController as CompanyViewController
             
                 //prepopulate the textView
-            companyDetailViewController.passedCompanyDetail = selectedCompanyDetail.valueForKey("detail") as String
+            var detail = ""
+            detail += selectedCompanyDetail.valueForKey("name") as String
+            detail += "\r"
+            detail += selectedCompanyDetail.valueForKey("website") as String
+            detail += "\r\rMajors: \r"
+            detail += selectedCompanyDetail.valueForKey("majors") as String
+            detail += "\r\rDesired degrees: \r"
+            detail += selectedCompanyDetail.valueForKey("desiredDegrees") as String
+            detail += "\r\rWork Type:\r"
+            detail += selectedCompanyDetail.valueForKey("workType") as String
+            detail += "\r\rDescription:\r"
+            detail += selectedCompanyDetail.valueForKey("detail") as String
+            
+            companyDetailViewController.passedCompanyDetail = detail
         }
     }
     

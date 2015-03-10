@@ -41,16 +41,16 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ZTS-Ej-wMo" kind="show" identifier="myCompaniesDetailSegue" trigger="accessoryAction" id="A2F-tQ-Xxf"/>
+                                    <segue destination="XXN-EH-oOJ" kind="show" identifier="myCompaniesDetailSegue" trigger="accessoryAction" id="m3V-HS-8bd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="My Companies" image="MyCompanies32.png" id="OXU-3U-Ge6"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="OXU-3U-Ge6"/>
                     <navigationItem key="navigationItem" id="Lk4-ze-TOy">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Zig-Gw-Vzy">
                             <connections>
-                                <segue destination="c8I-gN-6U0" kind="show" id="ZWH-ZA-bl6"/>
+                                <segue destination="LE2-Aw-H3b" kind="show" id="K9F-vd-wb2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -58,6 +58,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXE-5K-hde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="756" y="369"/>
+        </scene>
+        <!--Choose Company Table View Controller-->
+        <scene sceneID="sOI-Co-yFS">
+            <objects>
+                <tableViewController id="LE2-Aw-H3b" customClass="ChooseCompanyTableViewController" customModule="iSpring_Fair_2015" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XBa-uv-0xP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="uFa-ia-aPy">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="LE2-Aw-H3b" id="DaN-8V-SvM"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chooseCompanyCell" id="7Th-QL-0oE">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Th-QL-0oE" id="TpL-Ck-HPD">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LE2-Aw-H3b" id="pT5-Mt-nNu"/>
+                            <outlet property="delegate" destination="LE2-Aw-H3b" id="WbY-KX-fi9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="pAL-gt-aZS">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="wge-Kf-Qh8">
+                            <connections>
+                                <action selector="cancelButton:" destination="LE2-Aw-H3b" id="Grj-lG-BlJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="cyo-TK-duM" id="RIT-Tb-4Ym"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Osu-GH-nkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="cyo-TK-duM">
+                    <connections>
+                        <outlet property="delegate" destination="LE2-Aw-H3b" id="Mhw-h4-MOX"/>
+                        <outlet property="searchBar" destination="uFa-ia-aPy" id="1WB-of-exb"/>
+                        <outlet property="searchContentsController" destination="LE2-Aw-H3b" id="JgK-lI-4Cc"/>
+                        <outlet property="searchResultsDataSource" destination="LE2-Aw-H3b" id="2eJ-f7-1A8"/>
+                        <outlet property="searchResultsDelegate" destination="LE2-Aw-H3b" id="qpb-pe-Kgb"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1585.5" y="369"/>
         </scene>
         <!--Notes-->
         <scene sceneID="myb-Ea-86d">
@@ -323,11 +376,159 @@
             </objects>
             <point key="canvasLocation" x="-1801.5" y="-574"/>
         </scene>
-        <!--Major Relevant-->
+        <!--Layout-->
+        <scene sceneID="Qlb-fy-50k">
+            <objects>
+                <tableViewController id="3Rr-h3-Kl1" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="M6z-ZC-KqF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="layoutCell" id="h3d-qR-q9r">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h3d-qR-q9r" id="4vW-dQ-suv">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="wBZ-jf-4wb" kind="show" id="uEf-ew-anA"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Rr-h3-Kl1" id="wMR-MJ-G0I"/>
+                            <outlet property="delegate" destination="3Rr-h3-Kl1" id="eyd-Dj-BhI"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Layout" image="map_marker-24.png" id="C7O-ps-Rfv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k74-3c-Sqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3621" y="-1274"/>
+        </scene>
+        <!--Room Layout-->
+        <scene sceneID="75a-g0-ehC">
+            <objects>
+                <viewController id="wBZ-jf-4wb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fas-yK-8YJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="TtG-C2-JGK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K80-t7-bu6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="b64" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAG-TY-fhU">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="244" y="358" width="30" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="b1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSu-m6-htH">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="71" y="15" width="30" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CT1-3I-i7z">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="114" y="15" width="30" height="30"/>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="l1" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH0-TJ-wni">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="46" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2015-03-08 at 3.21.31 AM.png" translatesAutoresizingMaskIntoConstraints="NO" id="bfA-Ze-h8S">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEN-AJ-hdk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="71" y="15" width="30" height="30"/>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkf-Mv-eUf">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="51" y="46" width="71" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bfA-Ze-h8S" firstAttribute="top" secondItem="K80-t7-bu6" secondAttribute="top" id="E5e-IB-0my"/>
+                            <constraint firstAttribute="trailing" secondItem="bfA-Ze-h8S" secondAttribute="trailing" id="UfZ-2l-KhD"/>
+                            <constraint firstItem="bfA-Ze-h8S" firstAttribute="leading" secondItem="K80-t7-bu6" secondAttribute="leading" id="bYl-Xj-wB8"/>
+                            <constraint firstItem="bfA-Ze-h8S" firstAttribute="bottom" secondItem="TtG-C2-JGK" secondAttribute="top" id="dwK-18-9SF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="EAG-TY-fhU"/>
+                                <exclude reference="kSu-m6-htH"/>
+                                <exclude reference="CT1-3I-i7z"/>
+                                <exclude reference="sH0-TJ-wni"/>
+                                <exclude reference="bfA-Ze-h8S"/>
+                                <exclude reference="gEN-AJ-hdk"/>
+                                <exclude reference="mkf-Mv-eUf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="E5e-IB-0my"/>
+                                <exclude reference="UfZ-2l-KhD"/>
+                                <exclude reference="bYl-Xj-wB8"/>
+                                <exclude reference="dwK-18-9SF"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="EAG-TY-fhU"/>
+                                <include reference="kSu-m6-htH"/>
+                                <include reference="CT1-3I-i7z"/>
+                                <include reference="sH0-TJ-wni"/>
+                                <include reference="bfA-Ze-h8S"/>
+                                <include reference="gEN-AJ-hdk"/>
+                                <include reference="mkf-Mv-eUf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="E5e-IB-0my"/>
+                                <include reference="UfZ-2l-KhD"/>
+                                <include reference="bYl-Xj-wB8"/>
+                                <include reference="dwK-18-9SF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Room Layout" image="map_marker-24.png" id="vcv-W2-gow"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVV-TT-9bZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2860.5" y="-1523"/>
+        </scene>
+        <!--Major Related-->
         <scene sceneID="fcQ-fS-oaK">
             <objects>
                 <navigationController id="2oZ-hl-EfV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Major Relevant" image="search_property-26.png" id="JzL-2O-LSG"/>
+                    <tabBarItem key="tabBarItem" title="Major Related" image="search_property-26.png" id="JzL-2O-LSG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b3x-hu-s4i">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -344,10 +545,10 @@
         <scene sceneID="o0w-YI-sWf">
             <objects>
                 <tableViewController title="Major Relevant Companies" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MSR-kO-bXX" customClass="RelevantCompaniesTableViewController" customModule="iSpring_Fair_2015" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="relatedCompaniesTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="qOY-Tz-qn1">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="relatedCompaniesTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qOY-Tz-qn1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="relevantCompanyCell" selectionStyle="blue" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="relevantCompanyCell" textLabel="9ei-uf-9rC" detailTextLabel="LGf-ek-4Wu" style="IBUITableViewCellStyleSubtitle" id="nUG-YN-bW7">
@@ -376,7 +577,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ZTS-Ej-wMo" kind="show" identifier="relevantCompanyDetailSegue" trigger="accessoryAction" id="JTG-A4-0dn"/>
+                                    <segue destination="XXN-EH-oOJ" kind="show" identifier="majorRelevantDetailSegue" trigger="accessoryAction" id="fnv-Wf-rll"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -497,65 +698,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxC-x7-hi3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="-1113"/>
-        </scene>
-        <!--Company View Controller-->
-        <scene sceneID="hVK-pE-RiQ">
-            <objects>
-                <viewController id="ZTS-Ej-wMo" customClass="CompanyViewController" customModule="iSpring_Fair_2015" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2yK-sg-NRn"/>
-                        <viewControllerLayoutGuide type="bottom" id="H0s-cF-XTO"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vz5-Xp-gh9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="No available detail" translatesAutoresizingMaskIntoConstraints="NO" id="ooq-ep-Odw">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ooq-ep-Odw" secondAttribute="trailing" id="BdS-bw-wqf"/>
-                            <constraint firstItem="H0s-cF-XTO" firstAttribute="top" secondItem="ooq-ep-Odw" secondAttribute="bottom" constant="2" id="DE3-tc-39Y"/>
-                            <constraint firstItem="ooq-ep-Odw" firstAttribute="top" secondItem="vz5-Xp-gh9" secondAttribute="topMargin" constant="61" id="R4o-W8-z0G"/>
-                            <constraint firstItem="ooq-ep-Odw" firstAttribute="leading" secondItem="vz5-Xp-gh9" secondAttribute="leading" id="u2n-il-RJ0"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="ooq-ep-Odw"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="DE3-tc-39Y"/>
-                                <exclude reference="BdS-bw-wqf"/>
-                                <exclude reference="R4o-W8-z0G"/>
-                                <exclude reference="u2n-il-RJ0"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="ooq-ep-Odw"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="DE3-tc-39Y"/>
-                                <include reference="BdS-bw-wqf"/>
-                                <include reference="R4o-W8-z0G"/>
-                                <include reference="u2n-il-RJ0"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <connections>
-                        <outlet property="companyDetailTextView" destination="ooq-ep-Odw" id="w7y-qb-non"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GW7-KD-hFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1131" y="-713"/>
+            <point key="canvasLocation" x="367.5" y="-1181"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="A9V-eh-L32">
@@ -600,7 +743,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ZTS-Ej-wMo" kind="show" identifier="myDetailSegue" id="S7T-YR-Tsy"/>
+                                    <segue destination="XXN-EH-oOJ" kind="show" identifier="companiesDetailSegue" id="wVP-ON-ryK"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -627,11 +770,90 @@
             </objects>
             <point key="canvasLocation" x="310.5" y="-444"/>
         </scene>
-        <!--All Companies-->
+        <!--Company View Controller-->
+        <scene sceneID="1Hp-r1-VU1">
+            <objects>
+                <viewController id="XXN-EH-oOJ" customClass="CompanyViewController" customModule="iSpring_Fair_2015" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vOa-Bs-NVK"/>
+                        <viewControllerLayoutGuide type="bottom" id="5WT-bI-zmI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gQg-oj-Jgn">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FC1-5O-QeW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="zMB-Eb-uOn">
+                                        <barButtonItem key="rightBarButtonItem" image="star-25.png" id="SoV-vN-TP1"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kYU-oJ-SVJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kYU-oJ-SVJ" firstAttribute="leading" secondItem="gQg-oj-Jgn" secondAttribute="leading" id="2MD-P5-vEO"/>
+                            <constraint firstItem="kYU-oJ-SVJ" firstAttribute="top" secondItem="FC1-5O-QeW" secondAttribute="bottom" id="Qie-9k-o3m"/>
+                            <constraint firstItem="kYU-oJ-SVJ" firstAttribute="bottom" secondItem="5WT-bI-zmI" secondAttribute="top" id="SJq-yl-9eV"/>
+                            <constraint firstItem="kYU-oJ-SVJ" firstAttribute="leading" secondItem="FC1-5O-QeW" secondAttribute="leading" id="T9v-dT-w1A"/>
+                            <constraint firstAttribute="trailing" secondItem="kYU-oJ-SVJ" secondAttribute="trailing" id="b67-WG-gSj"/>
+                            <constraint firstItem="kYU-oJ-SVJ" firstAttribute="trailing" secondItem="FC1-5O-QeW" secondAttribute="trailing" id="qtc-fn-gHO"/>
+                            <constraint firstItem="kYU-oJ-SVJ" firstAttribute="top" secondItem="vOa-Bs-NVK" secondAttribute="bottom" id="zg9-eI-ScT"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FC1-5O-QeW"/>
+                                <exclude reference="kYU-oJ-SVJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2MD-P5-vEO"/>
+                                <exclude reference="Qie-9k-o3m"/>
+                                <exclude reference="SJq-yl-9eV"/>
+                                <exclude reference="T9v-dT-w1A"/>
+                                <exclude reference="b67-WG-gSj"/>
+                                <exclude reference="qtc-fn-gHO"/>
+                                <exclude reference="zg9-eI-ScT"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="FC1-5O-QeW"/>
+                                <include reference="kYU-oJ-SVJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2MD-P5-vEO"/>
+                                <include reference="Qie-9k-o3m"/>
+                                <include reference="SJq-yl-9eV"/>
+                                <include reference="T9v-dT-w1A"/>
+                                <include reference="b67-WG-gSj"/>
+                                <include reference="qtc-fn-gHO"/>
+                                <include reference="zg9-eI-ScT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="companyDetailTextView" destination="kYU-oJ-SVJ" id="LYS-y6-a7m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8C-ke-nEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="-700"/>
+        </scene>
+        <!--Companies-->
         <scene sceneID="dNX-dE-0zY">
             <objects>
                 <navigationController id="YA6-9U-s2j" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All Companies" image="conference-26.png" id="Aaf-VE-ZP7"/>
+                    <tabBarItem key="tabBarItem" title="Companies" image="conference-26.png" id="Aaf-VE-ZP7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N8W-yY-4TU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -644,11 +866,11 @@
             </objects>
             <point key="canvasLocation" x="-619.5" y="-444"/>
         </scene>
-        <!--My Companies-->
+        <!--Navigation Controller-->
         <scene sceneID="tDx-eu-1dk">
             <objects>
                 <navigationController id="utx-IQ-iT1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Companies" image="MyCompanies32.png" id="54q-hH-EeL"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="54q-hH-EeL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vsB-NN-BWg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -661,11 +883,11 @@
             </objects>
             <point key="canvasLocation" x="-30" y="361"/>
         </scene>
-        <!--My Companies-->
+        <!--Details Split View Controller-->
         <scene sceneID="88C-9q-46s">
             <objects>
                 <splitViewController id="q7C-uD-p4K" customClass="DetailsSplitViewController" customModule="iSpring_Fair_2015" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Companies" image="MyCompanies32.png" id="slg-Wa-5KN"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="slg-Wa-5KN"/>
                     <navigationItem key="navigationItem" id="iIZ-mA-grE"/>
                     <connections>
                         <segue destination="utx-IQ-iT1" kind="relationship" relationship="masterViewController" id="uSN-8H-SVR"/>
@@ -675,71 +897,17 @@
             </objects>
             <point key="canvasLocation" x="-744" y="445"/>
         </scene>
-        <!--Add Company Picker View Controller-->
-        <scene sceneID="QTX-xt-jtc">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="c8I-gN-6U0" customClass="AddCompanyPickerViewController" customModule="iSpring_Fair_2015" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eKJ-7D-Gcx"/>
-                        <viewControllerLayoutGuide type="bottom" id="kI3-yQ-a9h"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0dF-Jh-qjb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aav-1t-iWA" customClass="AddCompanyPickerView" customModule="iSpring_Fair_2015" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-39" y="104" width="400" height="162"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="c8I-gN-6U0" id="FBH-uF-xWu"/>
-                                    <outlet property="delegate" destination="c8I-gN-6U0" id="XIE-9D-9fx"/>
-                                </connections>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="aav-1t-iWA"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="aav-1t-iWA"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="a49-E8-55Q">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fAL-Rb-n81">
-                            <connections>
-                                <action selector="cancelButton:" destination="c8I-gN-6U0" id="bkh-5w-X9w"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sn3-6k-oua">
-                            <connections>
-                                <action selector="saveButton:" destination="c8I-gN-6U0" id="7jQ-Ny-xCN"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="pickerResult" destination="aav-1t-iWA" id="Gb7-h7-kDL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L3b-ZW-i8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1624.5" y="354"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="MyCompanies32.png" width="32" height="32"/>
+        <image name="Screen Shot 2015-03-08 at 3.21.31 AM.png" width="772" height="800"/>
         <image name="businessman-26.png" width="26" height="26"/>
         <image name="conference-26.png" width="26" height="26"/>
+        <image name="map_marker-24.png" width="24" height="24"/>
         <image name="search_property-26.png" width="26" height="26"/>
+        <image name="star-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="wVP-ON-ryK"/>
         <segue reference="OpC-91-Sfu"/>
-        <segue reference="JTG-A4-0dn"/>
     </inferredMetricsTieBreakers>
 </document>
